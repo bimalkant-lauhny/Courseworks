@@ -24,11 +24,15 @@ So if programmer initializes variables inside constructor body, then it is
 doing same work twice.
 */
 Person::Person(std::string first, std::string last) : firstname(first), lastname(last) {
-    std::cout << "Constructing: " << getName() << std::endl;
+    std::cout << "Constructing Person: " << getName() << std::endl;
+}
+
+Person::Person() {
+    std::cout << "Constructing Person: " << getName() << std::endl;
 }
 
 Person::~Person() {
-    std::cout << "Destructing: " << getName() << std::endl;
+    std::cout << "Destructing Person: " << getName() << std::endl;
 }
 
 std::string Person::getName() {

@@ -12,8 +12,10 @@ class Person {
     /* 
     Ask compiler to generate a default constructor that doesn't take any 
     arguments since now there is one explicit constructor 
-    */
     Person()=default;
+    */
+
+    Person();
 
     // to get the full name of person
     std::string getName();
