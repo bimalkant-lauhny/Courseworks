@@ -1,6 +1,11 @@
 #include <iostream>
-//#include "Person.h"
+#include "Person.h"
 #include "Tweeter.h"
+/* 
+Including both Person and Tweeter header will not throw redefinition error
+since 'pragma once' has been included in every header
+*/
+#include "Status.h"
 
 int main(void) {
     Person p("Bikram", "Lauhny");
@@ -11,5 +16,15 @@ int main(void) {
         Person p2;
     }
     std::cout << p.getName() << std::endl; 
+
+    Status s = Pending;
+    s = Approved;
+
+    FileError fe = FileError::notfound;
+    fe = FileError::ok;
+
+    NetworkError ne = NetworkError::disconnected;
+    ne = NetworkError::ok;
+
     return 0;
 }

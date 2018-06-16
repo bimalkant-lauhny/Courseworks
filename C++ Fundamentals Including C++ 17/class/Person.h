@@ -1,3 +1,8 @@
+#pragma once
+/*
+  pragma once preprocessor forces the compiler to include declarations only once
+*/
+
 #include <string>
 
 class Person {
