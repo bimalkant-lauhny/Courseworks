@@ -35,6 +35,11 @@ Person::~Person() {
     std::cout << "Destructing Person: " << getName() << std::endl;
 }
 
-std::string Person::getName() {
+/* 'const' keyword ensures that member function must not change any
+data member */
+/* A better design is to start by declaring each member function as
+const. Then, if the function changes any data member, remove const from
+it */
+std::string Person::getName() const {
     return this->firstname + " " + this->lastname;
 }

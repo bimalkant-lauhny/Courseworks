@@ -23,7 +23,8 @@ class Person {
     Person();
 
     // to get the full name of person
-    std::string getName();
+    // const means that getName() will not alter any data member of the class
+    std::string getName() const;
 
     ~Person();
 };
