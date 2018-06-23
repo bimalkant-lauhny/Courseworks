@@ -1,2 +1,0 @@
-bool IsPrime(int x);
-
